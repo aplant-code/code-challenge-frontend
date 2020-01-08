@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
     // {name: 'Meloburne Cup', venue: 'Melbourne', time: 'Tuesday', icon: 'horse'}
   ];
 
-  private displayedColumns: string[] = ['eventName', 'eventVenue', 'eventTime', 'eventIcon'];
+  private displayedColumns: string[] = ['eventIcon', 'eventTitle', 'eventTime'];
 
   constructor(private racesService: RacesService) {
 
