@@ -23,7 +23,7 @@ export class RacesService {
             race.name = raceJson['EventName'];
             race.venue = raceJson['Venue']['Venue'];
             race.time = raceJson['AdvertisedStartTime'];
-            race.icon = raceJson['EventType']['Slug'];
+            race.icon = raceJson['EventType']['Slug'].replace("-", "");
 
             races.push(race);
           }

@@ -6,7 +6,7 @@
 <table mat-table [dataSource]="races">
   <ng-container matColumnDef="eventIcon">
     <th mat-header-cell *matHeaderCellDef>Icon</th>
-    <td mat-cell *matCellDef="let element"></td>
+    <td mat-cell *matCellDef="let element"><img src="assets/images/{{element.icon}}.svg" width="32px" height="32px"></td>
   </ng-container>
   <ng-container matColumnDef="eventTitle">
     <th mat-header-cell *matHeaderCellDef></th>

@@ -1,3 +1,8 @@
 table {
     width: 100%;
 }
+
+.mat-toolbar.mat-primary {
+    background: #8935c0;
+    color: #fff;
+  }
