@@ -1,6 +1,10 @@
 # CodeChallengeFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+# TODO Items
+
+Unit tests - ran out of time...
+Ensure buttons stay highlighted once filter is applied
+Implement time until race as a countdown timer (like on the site), and apply timezone correctly
 
 ## Development server
 
