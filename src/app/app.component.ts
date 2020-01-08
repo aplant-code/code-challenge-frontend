@@ -25,9 +25,13 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.racesService.GetRaces()
-      .subscribe(res => {
-        this.races = res;
-        this.filteredRaces = this.races;
+      .subscribe(
+        res => {
+          this.races = res;
+          this.filteredRaces = this.races;
+      },
+      err => {
+        // TODO: Implement proper error handling from the race service
       });
   }
 
