@@ -9,9 +9,8 @@ import { Race } from 'src/models/race';
 })
 export class AppComponent implements OnInit {
   title = 'code-challenge-frontend';
-  private races: Race[] = [
-    // {name: 'Meloburne Cup', venue: 'Melbourne', time: 'Tuesday', icon: 'horse'}
-  ];
+  private races: Race[] = [];
+  private filteredRaces: Race[] = [];
 
   private displayedColumns: string[] = ['eventIcon', 'eventTitle', 'eventTime'];
 
@@ -23,6 +22,23 @@ export class AppComponent implements OnInit {
     this.racesService.GetRaces()
       .subscribe(res => {
         this.races = res;
+        this.filteredRaces = this.races;
       });
+  }
+
+  private filterRaces(type: number) {
+    switch (type) {
+      case 1:
+        this.filteredRaces = this.races.filter(race => race.icon == "horseracing");
+        break;
+      case 2:
+        this.filteredRaces = this.races.filter(race => race.icon == "greyhoundracing");
+        break;
+      case 3:
+        this.filteredRaces = this.races.filter(race => race.icon == "harnessracing");
+        break;
+      default:
+        this.filteredRaces = this.races;
+    }
   }
 }
