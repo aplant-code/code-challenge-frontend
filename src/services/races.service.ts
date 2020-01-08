@@ -4,6 +4,8 @@ import { filter, map, catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 import { Race } from 'src/models/race';
 
+const url = "https://s3-ap-southeast-2.amazonaws.com/bet-easy-code-challenge/next-to-jump";
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,7 +14,7 @@ export class RacesService {
   constructor(private http: HttpClient) { }
 
   public GetRaces(): Observable<Race[]> {
-    return this.http.get("https://s3-ap-southeast-2.amazonaws.com/bet-easy-code-challenge/next-to-jump")
+    return this.http.get(url)
       .pipe(
         map((data) => {
           var races: Race[] = [];
